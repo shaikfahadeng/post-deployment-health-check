@@ -1,3 +1,12 @@
-# post-deployment-health-check
-Automated health check to prevent faulty deployments
-This project demonstrates a simple automated health check performed after deployment to reduce production incidents.
+# Post Deployment Health Check
+
+## Problem Statement
+In many production environments, faulty deployments can go unnoticed and later result in high-severity incidents.
+
+## Solution
+This project demonstrates a simple automated health check performed immediately after deployment to validate application health and prevent faulty releases.
+
+## Key Idea
+- Automate post-deployment validation
+- Fail deployments early if health checks fail
+- Reduce incident recurrence and MTTR
