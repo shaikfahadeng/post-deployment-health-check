@@ -28,3 +28,10 @@ This project implements a lightweight post-deployment health check that validate
 - Python
 - Azure DevOps Pipelines
 - GitHub
+## Failure Handling (SRE Perspective)
+If the health check fails (for example, if the application endpoint is unreachable or times out), the Python script exits with a non-zero status code.
+
+Azure DevOps interprets this as a failure and immediately marks the pipeline as failed, preventing faulty deployments from progressing further.
+
+This fail-fast approach helps protect system reliability and reduces Mean Time To Recovery (MTTR).
+
