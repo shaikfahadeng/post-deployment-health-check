@@ -3,7 +3,7 @@ import sys
 
 print("Post-deployment health check started")
 
-url = "https://invalid-health-check-url.example"
+url = "https://www.google.com"
 
 try:
     urllib.request.urlopen(url, timeout=5)
