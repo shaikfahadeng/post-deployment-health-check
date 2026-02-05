@@ -38,4 +38,6 @@ This fail-fast approach helps protect system reliability and reduces Mean Time T
 - Demonstrates how operational decision-making can be automated using CI/CD pipelines
 - Shows practical application of SRE principles such as fail-fast validation and reliability gates
 - Bridges traditional incident management practices with modern DevOps automation
+## Change Management Integration
+The pipeline includes a manual approval stage that simulates ITIL change approval (CAB). Only after approval does the pipeline proceed to automated post-deployment validation, ensuring controlled and reliable releases.
 
