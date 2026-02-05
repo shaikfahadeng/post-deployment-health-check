@@ -11,4 +11,4 @@ try:
     sys.exit(0)   # SUCCESS → pipeline continues
 except Exception as e:
     print("Application is unhealthy")
-    sys.exit(1)   # FAILURE → pipeline stops
+    sys.exit(1)   # FAILURE → pipeline stops 
