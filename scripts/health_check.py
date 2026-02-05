@@ -1,8 +1,11 @@
+import urllib.request
+
 print("Post-deployment health check started")
 
-status = "OK"
+url = "https://www.google.com"
 
-if status == "OK":
+try:
+    urllib.request.urlopen(url, timeout=5)
     print("Application is healthy")
-else:
+except:
     print("Application is unhealthy")
