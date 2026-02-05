@@ -34,4 +34,8 @@ If the health check fails (for example, if the application endpoint is unreachab
 Azure DevOps interprets this as a failure and immediately marks the pipeline as failed, preventing faulty deployments from progressing further.
 
 This fail-fast approach helps protect system reliability and reduces Mean Time To Recovery (MTTR).
+## Project Outcome
+- Demonstrates how operational decision-making can be automated using CI/CD pipelines
+- Shows practical application of SRE principles such as fail-fast validation and reliability gates
+- Bridges traditional incident management practices with modern DevOps automation
 
