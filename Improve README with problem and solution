@@ -10,3 +10,4 @@ This project demonstrates a simple automated health check performed immediately 
 - Automate post-deployment validation
 - Fail deployments early if health checks fail
 - Reduce incident recurrence and MTTR
+ 
