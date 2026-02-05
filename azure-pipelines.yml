@@ -6,10 +6,30 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-latest'
+stages:
+- stage: Approval
+  displayName: 'Change Approval'
+  jobs:
+  - job: AwaitApproval
+    displayName: 'Await CAB Approval'
+    pool: server
+    steps:
+    - task: ManualValidation@0
+      inputs:
+        instructions: 'Approve change to proceed with post-deployment validation.'
+        onTimeout: 'reject'
+      timeoutInMinutes: 60
 
-steps:
-- script: python scripts/health_check.py
-  displayName: 'Run post-deployment health check'
+- stage: Validation
+  displayName: 'Post-Deployment Validation'
+  dependsOn: Approval
+  jobs:
+  - job: HealthCheck
+    displayName: 'Run Health Check'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: python scripts/health_check.py
+      displayName: 'Run post-deployment health check'
+
 
